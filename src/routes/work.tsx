@@ -41,7 +41,7 @@ function WorkPage() {
 
       <section className="border-y border-white/5 sticky top-20 z-40 backdrop-blur bg-[#0A0A0A]/80">
         <div className="mx-auto max-w-[1600px] px-5 sm:px-10 flex gap-2 overflow-x-auto py-4 scrollbar-hide">
-          {(["All", ...categories] as const).map((c) => (
+          {(["All", ...filterCategories] as const).map((c) => (
             <button
               key={c}
               onClick={() => setActive(c)}

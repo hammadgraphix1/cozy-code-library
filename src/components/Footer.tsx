@@ -63,7 +63,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col-reverse gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="text-xs text-white/40">
-            © 2025 Hammad Graphix. All Rights Reserved.
+            © 2026 hammadgraphix. All Rights Reserved.
           </div>
           <div className="text-xs uppercase tracking-[0.25em] text-white/40">
             Design · Branding · Advertising

@@ -37,10 +37,11 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
             </span>
           </div>
           <p className="mt-3 text-sm text-white/55 leading-relaxed line-clamp-2">{project.description}</p>
-          <div className="mt-5 flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-white/40">
-            <span>Client · {project.client}</span>
-            {project.caseStudy && <span className="text-[#C8FF00]/80">Case Study →</span>}
-          </div>
+          {project.caseStudy && (
+            <div className="mt-5 flex items-center justify-end text-[10px] uppercase tracking-[0.2em] text-[#C8FF00]/80">
+              Case Study →
+            </div>
+          )}
         </div>
       </div>
     </Link>

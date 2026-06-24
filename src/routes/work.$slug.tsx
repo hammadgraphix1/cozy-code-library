@@ -15,7 +15,7 @@ export const Route = createFileRoute("/work/$slug")({
       <Header />
       <div className="pt-40 pb-20 text-center px-5">
         <h1 className="font-display text-6xl">Project Not Found</h1>
-        <Link to="/work" className="mt-8 inline-block rounded-full bg-[#DFFF00] text-black px-6 py-3 text-xs uppercase tracking-[0.2em] font-bold">Back to Work</Link>
+        <Link to="/work" className="mt-8 inline-block rounded-full bg-[#C8FF00] text-black px-6 py-3 text-xs uppercase tracking-[0.2em] font-bold">Back to Work</Link>
       </div>
       <Footer />
     </div>
@@ -45,11 +45,11 @@ function ProjectDetailPage() {
 
       <section className="pt-36 pb-16">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
-          <Link to="/work" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/50 hover:text-[#DFFF00] transition-colors mb-10">
+          <Link to="/work" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/50 hover:text-[#C8FF00] transition-colors mb-10">
             ← Back to Work
           </Link>
           <div className="flex flex-wrap items-center gap-3 text-[10px] uppercase tracking-[0.25em] text-white/50 mb-6">
-            <span className="rounded-full bg-[#DFFF00]/10 text-[#DFFF00] px-3 py-1">{project.category}</span>
+            <span className="rounded-full bg-[#C8FF00]/10 text-[#C8FF00] px-3 py-1">{project.category}</span>
             <span>·</span>
             <span>{project.year}</span>
             <span>·</span>
@@ -71,7 +71,7 @@ function ProjectDetailPage() {
       {cs && (
         <section className="py-20 border-t border-white/5">
           <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#DFFF00]">Case Study</span>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Case Study</span>
             <h2 className="mt-4 font-display text-5xl sm:text-7xl leading-[0.9]">Deep Dive.</h2>
 
             <div className="mt-16 grid gap-12 md:grid-cols-2">
@@ -81,7 +81,7 @@ function ProjectDetailPage() {
               <CSBlock n="04" label="Strategy" body={cs.strategy} />
               <CSBlock n="05" label="Design Process" body={cs.process} />
               <CSBlock n="06" label="Solution" body={cs.solution} />
-              <div className="md:col-span-2 rounded-3xl bg-[#DFFF00] text-black p-10 sm:p-14">
+              <div className="md:col-span-2 rounded-3xl bg-[#C8FF00] text-black p-10 sm:p-14">
                 <span className="text-[10px] uppercase tracking-[0.3em]">07 · Result</span>
                 <p className="mt-6 font-display text-3xl sm:text-5xl leading-tight">{cs.result}</p>
               </div>
@@ -92,9 +92,9 @@ function ProjectDetailPage() {
 
       <section className="py-24 border-t border-white/5">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-10 text-center">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#DFFF00]">Next Project</span>
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Next Project</span>
           <Link to="/work/$slug" params={{ slug: next.slug }} className="mt-6 block group">
-            <h3 className="font-display text-[10vw] sm:text-[6vw] leading-[0.9] tracking-[-0.04em] group-hover:text-[#DFFF00] transition-colors">
+            <h3 className="font-display text-[10vw] sm:text-[6vw] leading-[0.9] tracking-[-0.04em] group-hover:text-[#C8FF00] transition-colors">
               {next.title} →
             </h3>
           </Link>
@@ -102,7 +102,7 @@ function ProjectDetailPage() {
       </section>
 
       <section className="py-20 border-t border-white/5 text-center">
-        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full bg-[#DFFF00] text-black px-8 py-4 text-xs font-bold uppercase tracking-[0.18em] glow-yellow hover:scale-105 transition-transform">
+        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full bg-[#C8FF00] text-black px-8 py-4 text-xs font-bold uppercase tracking-[0.18em] glow-yellow hover:scale-105 transition-transform">
           Free Consultation →
         </a>
       </section>
@@ -116,7 +116,7 @@ function CSBlock({ n, label, body }: { n: string; label: string; body: string })
   return (
     <div className="rounded-3xl border border-white/8 bg-[#111] p-8 sm:p-10">
       <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.25em] text-white/40">
-        <span className="text-[#DFFF00]">{n}</span>
+        <span className="text-[#C8FF00]">{n}</span>
         <span>{label}</span>
       </div>
       <p className="mt-4 text-white/75 leading-relaxed">{body}</p>

@@ -65,9 +65,9 @@ function NotFound() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white flex items-center justify-center px-5">
       <div className="text-center">
-        <p className="text-[10px] uppercase tracking-[0.3em] text-[#DFFF00]">404</p>
+        <p className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">404</p>
         <h1 className="mt-4 font-display text-[20vw] sm:text-[10vw] leading-[0.88]">Page Lost.</h1>
-        <Link to="/" className="mt-10 inline-flex items-center gap-3 rounded-full bg-[#DFFF00] text-black px-7 py-4 text-xs font-bold uppercase tracking-[0.2em]">
+        <Link to="/" className="mt-10 inline-flex items-center gap-3 rounded-full bg-[#C8FF00] text-black px-7 py-4 text-xs font-bold uppercase tracking-[0.2em]">
           Back Home →
         </Link>
       </div>

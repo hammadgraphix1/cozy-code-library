@@ -8,7 +8,6 @@ const nav = [
   { to: "/work", label: "Work" },
   { to: "/services", label: "Services" },
   { to: "/about", label: "About" },
-  { to: "/case-studies", label: "Case Studies" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -36,17 +35,18 @@ export function Header() {
           }`}
         >
           <Link to="/" className="flex items-center gap-3 group">
-            <span className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-[#DFFF00]/40 transition-all group-hover:ring-[#DFFF00]">
+            <span className="relative inline-block h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-[#C8FF00]/40 transition-all group-hover:ring-[#C8FF00]">
               <img
                 src={profile.url}
                 alt="Hammad Alvi"
-                className="h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
+                style={{ objectPosition: "center 25%" }}
               />
             </span>
             <span className="hidden sm:flex flex-col leading-none">
-              <span className="font-display text-sm tracking-tight">Hammad Alvi</span>
+              <span className="font-display text-base lowercase tracking-tight">hammadgraphix</span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-white/50">
-                Graphix Studio
+                Brand Identity Design
               </span>
             </span>
           </Link>
@@ -60,7 +60,7 @@ export function Header() {
                 activeProps={{ className: "text-white" }}
               >
                 {n.label}
-                <span className="absolute left-4 right-4 bottom-1 h-px bg-[#DFFF00] scale-x-0 group-hover:scale-x-100 origin-left transition-transform" />
+                <span className="absolute left-4 right-4 bottom-1 h-px bg-[#C8FF00] scale-x-0 group-hover:scale-x-100 origin-left transition-transform" />
               </Link>
             ))}
           </nav>
@@ -70,7 +70,7 @@ export function Header() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="hidden md:inline-flex items-center gap-2 rounded-full bg-[#DFFF00] text-black px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] hover:scale-105 transition-transform"
+              className="hidden md:inline-flex items-center gap-2 rounded-full bg-[#C8FF00] text-black px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] hover:scale-105 transition-transform"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-black animate-pulse" />
               Free Consultation
@@ -96,7 +96,7 @@ export function Header() {
                   key={n.to}
                   to={n.to}
                   onClick={() => setOpen(false)}
-                  className="font-display text-3xl py-2 text-white/80 hover:text-[#DFFF00] transition-colors"
+                  className="font-display text-3xl py-2 text-white/80 hover:text-[#C8FF00] transition-colors"
                 >
                   {n.label}
                 </Link>
@@ -105,7 +105,7 @@ export function Header() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-flex items-center justify-center rounded-full bg-[#DFFF00] text-black px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em]"
+                className="mt-4 inline-flex items-center justify-center rounded-full bg-[#C8FF00] text-black px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em]"
               >
                 Free Consultation
               </a>

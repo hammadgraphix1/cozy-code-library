@@ -18,15 +18,15 @@ function LogoDesignPage() {
     <div className="bg-[#0A0A0A] text-white min-h-screen">
       <Header />
       <section className="pt-40 pb-32 relative overflow-hidden">
-        <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-[#DFFF00]/[0.08] blur-[140px]" />
+        <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-[#C8FF00]/[0.08] blur-[140px]" />
         <div className="relative mx-auto max-w-[1400px] px-5 sm:px-10 text-center">
-          <Link to="/work" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/50 hover:text-[#DFFF00] mb-12">← Back to Work</Link>
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#DFFF00] text-black px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] font-bold">
+          <Link to="/work" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/50 hover:text-[#C8FF00] mb-12">← Back to Work</Link>
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#C8FF00] text-black px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] font-bold">
             <span className="h-1.5 w-1.5 rounded-full bg-black animate-pulse" />
             Coming Soon
           </span>
           <h1 className="mt-10 font-display text-[18vw] sm:text-[14vw] leading-[0.88] tracking-[-0.05em]">
-            COMING<br/><em className="not-italic text-[#DFFF00]">SOON.</em>
+            COMING<br/><em className="not-italic text-[#C8FF00]">SOON.</em>
           </h1>
           <p className="mt-10 text-xl sm:text-2xl text-white/65 max-w-2xl mx-auto">
             Professional Logo Collection In Progress.
@@ -35,7 +35,7 @@ function LogoDesignPage() {
             A new body of custom marks, wordmarks and full logo systems is being prepared for release. In the meantime, brand identity and advertising work is live in the portfolio.
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="rounded-full bg-[#DFFF00] text-black px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] glow-yellow hover:scale-105 transition-transform">
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="rounded-full bg-[#C8FF00] text-black px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] glow-yellow hover:scale-105 transition-transform">
               Request Early Access
             </a>
             <Link to="/work" className="rounded-full border border-white/15 px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] hover:border-white/40 transition-colors">

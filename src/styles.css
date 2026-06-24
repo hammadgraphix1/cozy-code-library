@@ -60,5 +60,29 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-12px); }
   }
+  .breathe { animation: breathe 5s ease-in-out infinite; }
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 60px -10px rgba(200,255,0,0.35); }
+    50% { transform: scale(1.04); box-shadow: 0 0 90px -10px rgba(200,255,0,0.55); }
+  }
+  .stagger > * { opacity: 0; animation: revealUp 0.8s cubic-bezier(0.22,1,0.36,1) both; }
+  .stagger > *:nth-child(1) { animation-delay: 80ms; }
+  .stagger > *:nth-child(2) { animation-delay: 200ms; }
+  .stagger > *:nth-child(3) { animation-delay: 320ms; }
+  .stagger > *:nth-child(4) { animation-delay: 440ms; }
+  .stagger > *:nth-child(5) { animation-delay: 560ms; }
+  .stagger > *:nth-child(6) { animation-delay: 680ms; }
+  .pulse-dot { animation: pulseDot 2.6s ease-in-out infinite; }
+  @keyframes pulseDot {
+    0%, 100% { opacity: 0.25; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+  .dash-flow {
+    stroke-dasharray: 6 8;
+    animation: dashFlow 2s linear infinite;
+  }
+  @keyframes dashFlow {
+    to { stroke-dashoffset: -28; }
+  }
   .grain { position: relative; }
 }

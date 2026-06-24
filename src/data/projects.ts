@@ -161,25 +161,25 @@ export const services = [
   {
     title: "Logo Design",
     description:
-      "Memorable marks, custom lettering systems, and identity foundations built to last a decade — not a trend cycle.",
+      "Crafting timeless logos that capture your brand's essence and leave a lasting impression.",
     deliverables: ["Custom Mark", "Wordmark", "Logo System", "Usage Guide"],
     comingSoon: true,
   },
   {
     title: "Brand Identity Design",
     description:
-      "Full visual identity systems — color, typography, grid, motion direction, asset libraries — engineered for cross-channel recall.",
+      "Full visual identity systems — color palettes, typography, brand guidelines, and more — built for consistency and impact.",
     deliverables: ["Identity System", "Brand Guidelines", "Asset Library", "Launch Kit"],
   },
   {
     title: "Social Media Design",
     description:
-      "Feed-stopping post, story, and reel templates that translate brand systems into daily content with editorial quality.",
+      "Scroll-stopping visuals designed to engage your audience and grow your digital presence.",
     deliverables: ["Post Templates", "Story Kits", "Reel Covers", "Content System"],
   },
 ];
 
 export const WHATSAPP_URL = "https://wa.me/923182957713";
-export const EMAIL = "hammadgraphix1@gmail.com";
+export const EMAIL = "hammadgraphixs@gmail.com";
 export const INSTAGRAM = "https://www.instagram.com/hammad.graphix/?hl=en";
 export const LINKEDIN = "https://www.linkedin.com/in/hammad-alvi-a06510372/";

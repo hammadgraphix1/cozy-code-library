@@ -3,7 +3,7 @@
 @theme {
   --color-bg: #0A0A0A;
   --color-surface: #111111;
-  --color-accent: #DFFF00;
+  --color-accent: #C8FF00;
   --color-text: #FFFFFF;
   --color-muted: #9CA3AF;
   --color-line: rgba(255,255,255,0.08);
@@ -20,7 +20,7 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-  ::selection { background: #DFFF00; color: #0A0A0A; }
+  ::selection { background: #C8FF00; color: #0A0A0A; }
   html { scroll-behavior: smooth; }
 }
 

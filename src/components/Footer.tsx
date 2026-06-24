@@ -5,13 +5,13 @@ import { EMAIL, INSTAGRAM, LINKEDIN, WHATSAPP_URL } from "@/data/projects";
 export function Footer() {
   return (
     <footer className="relative border-t border-white/5 bg-[#0A0A0A] overflow-hidden">
-      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[480px] w-[1200px] rounded-full bg-[#DFFF00]/[0.06] blur-[120px]" />
+      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[480px] w-[1200px] rounded-full bg-[#C8FF00]/[0.06] blur-[120px]" />
 
       <div className="relative mx-auto max-w-[1600px] px-5 sm:px-10 py-20 lg:py-28">
         <div className="grid gap-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-4">
-              <span className="relative h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#DFFF00]/40">
+              <span className="relative h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#C8FF00]/40">
                 <img src={profile.url} alt="Hammad Alvi" className="h-full w-full object-cover" />
               </span>
               <div>
@@ -26,7 +26,7 @@ export function Footer() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#DFFF00] text-black px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] hover:scale-105 transition-transform"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#C8FF00] text-black px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] hover:scale-105 transition-transform"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-black animate-pulse" />
               Free Consultation
@@ -90,11 +90,11 @@ function FooterCol({ title, items, external }: { title: string; items: { label: 
         {items.map((it) => (
           <li key={it.label}>
             {external ? (
-              <a href={it.to} target="_blank" rel="noreferrer" className="text-sm text-white/70 hover:text-[#DFFF00] transition-colors">
+              <a href={it.to} target="_blank" rel="noreferrer" className="text-sm text-white/70 hover:text-[#C8FF00] transition-colors">
                 {it.label} ↗
               </a>
             ) : (
-              <Link to={it.to} className="text-sm text-white/70 hover:text-[#DFFF00] transition-colors">
+              <Link to={it.to} className="text-sm text-white/70 hover:text-[#C8FF00] transition-colors">
                 {it.label}
               </Link>
             )}

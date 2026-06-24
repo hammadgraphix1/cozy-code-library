@@ -27,7 +27,7 @@ function WorkPage() {
       <Header />
       <section className="pt-40 pb-12">
         <div className="mx-auto max-w-[1600px] px-5 sm:px-10">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#DFFF00]">Portfolio</span>
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Portfolio</span>
           <h1 className="mt-4 font-display text-[14vw] sm:text-[10vw] leading-[0.88] tracking-[-0.04em]">
             Selected<br/><em className="not-italic text-white/30">Work.</em>
           </h1>
@@ -45,7 +45,7 @@ function WorkPage() {
               onClick={() => setActive(c)}
               className={`shrink-0 rounded-full px-5 py-2.5 text-xs uppercase tracking-[0.18em] transition-all ${
                 active === c
-                  ? "bg-[#DFFF00] text-black font-semibold"
+                  ? "bg-[#C8FF00] text-black font-semibold"
                   : "border border-white/10 text-white/70 hover:border-white/30"
               }`}
             >
@@ -78,13 +78,13 @@ function WorkPage() {
 
 function ComingSoonCard() {
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-[#DFFF00]/20 bg-gradient-to-br from-[#111] to-[#0A0A0A] p-10 sm:p-20 text-center group hover:border-[#DFFF00]/50 transition-colors">
-      <div className="pointer-events-none absolute inset-0 bg-[#DFFF00]/[0.04] opacity-0 group-hover:opacity-100 transition-opacity" />
-      <span className="inline-flex items-center gap-2 rounded-full bg-[#DFFF00] text-black px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] font-bold">
+    <div className="relative overflow-hidden rounded-3xl border border-[#C8FF00]/20 bg-gradient-to-br from-[#111] to-[#0A0A0A] p-10 sm:p-20 text-center group hover:border-[#C8FF00]/50 transition-colors">
+      <div className="pointer-events-none absolute inset-0 bg-[#C8FF00]/[0.04] opacity-0 group-hover:opacity-100 transition-opacity" />
+      <span className="inline-flex items-center gap-2 rounded-full bg-[#C8FF00] text-black px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] font-bold">
         Coming Soon
       </span>
       <h2 className="mt-8 font-display text-[14vw] sm:text-[9vw] leading-[0.88] tracking-[-0.04em]">
-        Logo<br/><em className="not-italic text-[#DFFF00]">Collection.</em>
+        Logo<br/><em className="not-italic text-[#C8FF00]">Collection.</em>
       </h2>
       <p className="mt-6 text-white/55 max-w-md mx-auto">
         Professional Logo Collection In Progress — drop coming soon.

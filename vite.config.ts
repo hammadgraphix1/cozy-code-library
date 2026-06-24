@@ -24,6 +24,7 @@ export default defineConfig(({ command, mode }) => {
     },
     plugins: [
       tsConfigPaths({ projects: ["./tsconfig.json"] }),
+      tailwindcss(),
       ...(useCloudflare ? [cloudflare({ viteEnvironment: { name: "ssr" } })] : []),
       tanstackStart(),
       viteReact(),

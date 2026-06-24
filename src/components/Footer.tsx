@@ -11,16 +11,16 @@ export function Footer() {
         <div className="grid gap-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-4">
-              <span className="relative h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#C8FF00]/40">
-                <img src={profile.url} alt="Hammad Alvi" className="h-full w-full object-cover" />
+              <span className="relative inline-block h-14 w-14 shrink-0 overflow-hidden rounded-full ring-2 ring-[#C8FF00]/40">
+                <img src={profile.url} alt="Hammad Alvi" className="absolute inset-0 h-full w-full object-cover" style={{ objectPosition: "center 25%" }} />
               </span>
               <div>
-                <p className="font-display text-xl">Hammad Alvi</p>
+                <p className="font-display text-xl lowercase">hammadgraphix</p>
                 <p className="text-xs uppercase tracking-[0.2em] text-white/50">Brand Identity Designer</p>
               </div>
             </div>
             <p className="mt-6 max-w-md text-sm text-white/60 leading-relaxed">
-              Independent design studio building memorable visual identities for ambitious brands worldwide. Based in Karachi.
+              Independent designer building memorable visual identities for ambitious brands worldwide. Based in Karachi · available globally.
             </p>
             <a
               href={WHATSAPP_URL}

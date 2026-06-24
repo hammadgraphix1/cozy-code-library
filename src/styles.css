@@ -1,9 +1,64 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0A0A0A;
+  --color-surface: #111111;
+  --color-accent: #DFFF00;
+  --color-text: #FFFFFF;
+  --color-muted: #9CA3AF;
+  --color-line: rgba(255,255,255,0.08);
+
+  --font-display: "Bricolage Grotesque", "Space Grotesque", system-ui, sans-serif;
+  --font-sans: "General Sans", "Inter", system-ui, sans-serif;
 }
 
-body {
-  font-family: system-ui, -apple-system, sans-serif;
+@layer base {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #0A0A0A; color: #fff; }
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection { background: #DFFF00; color: #0A0A0A; }
+  html { scroll-behavior: smooth; }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.04em; }
+  .text-balance { text-wrap: balance; }
+  .glass {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .glow-yellow {
+    box-shadow: 0 0 60px -10px rgba(223,255,0,0.35), 0 0 120px -40px rgba(223,255,0,0.25);
+  }
+  .noise::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.12 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity: 0.4; pointer-events: none; mix-blend-mode: overlay;
+  }
+  .marquee {
+    display: flex; gap: 4rem; width: max-content;
+    animation: marquee 40s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .reveal-up { animation: revealUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+  @keyframes revealUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .float-slow { animation: floatSlow 8s ease-in-out infinite; }
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  .grain { position: relative; }
 }

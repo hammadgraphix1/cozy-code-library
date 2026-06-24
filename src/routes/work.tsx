@@ -3,7 +3,9 @@ import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProjectCard } from "@/components/ProjectCard";
-import { projects, categories, type Category } from "@/data/projects";
+import { projects, type Category } from "@/data/projects";
+
+const filterCategories: Category[] = ["Logo Design", "Brand Identity Design", "Social Media Design"];
 
 export const Route = createFileRoute("/work")({
   component: WorkPage,

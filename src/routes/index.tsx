@@ -54,14 +54,14 @@ function Hero() {
           <div className="reveal-up flex justify-center lg:justify-start" style={{ animationDelay: "80ms" }}>
             <div className="relative">
               <div
-                className="relative overflow-hidden rounded-full ring-4 ring-[#C8FF00]/40 breathe bg-[#111]"
+                className="relative overflow-hidden rounded-full ring-4 ring-[#C8FF00]/40 breathe bg-transparent"
                 style={{ width: 200, height: 200 }}
               >
                 <img
                   src={profile.url}
                   alt="Hammad Alvi"
-                  className="absolute inset-0 h-full w-full object-contain"
-                  style={{ objectPosition: "center center" }}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  style={{ objectPosition: "center top" }}
                 />
               </div>
               <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 rounded-full bg-[#0A0A0A] border border-[#C8FF00]/40 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-[#C8FF00]">

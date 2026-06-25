@@ -35,18 +35,18 @@ export function Header() {
           }`}
         >
           <Link to="/" className="flex items-center gap-3 group">
-            <span className="relative inline-block h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-[#C8FF00]/40 transition-all group-hover:ring-[#C8FF00]">
+            <span className="relative inline-block h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-[#C8FF00]/40 bg-transparent transition-all group-hover:ring-[#C8FF00]">
               <img
                 src={profile.url}
                 alt="Hammad Alvi"
                 className="absolute inset-0 h-full w-full object-cover"
-                style={{ objectPosition: "center 25%" }}
+                style={{ objectPosition: "center top" }}
               />
             </span>
             <span className="hidden sm:flex flex-col leading-none">
-              <span className="font-display text-base lowercase tracking-tight">hammadgraphix</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-white/50">
-                Brand Identity Design
+              <span className="font-display text-base tracking-tight">Hammad Alvi</span>
+              <span className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/50">
+                I solve brand problems visually.
               </span>
             </span>
           </Link>

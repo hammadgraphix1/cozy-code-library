@@ -24,8 +24,8 @@ function AboutPage() {
         <div className="mx-auto max-w-[1600px] px-5 sm:px-10">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
             <div className="relative">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-[#111] border border-white/8">
-                <img src={profile.url} alt="Hammad Alvi" className="h-full w-full object-cover" />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-transparent border border-white/8">
+                <img src={profile.url} alt="Hammad Alvi" className="h-full w-full object-cover" style={{ objectPosition: "center top" }} />
               </div>
               <div className="absolute -top-4 -left-4 rotate-[-4deg] rounded-full bg-[#C8FF00] text-black px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] glow-yellow">
                 Karachi, PK

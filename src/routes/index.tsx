@@ -406,14 +406,14 @@ function About() {
       <div className="relative mx-auto max-w-[1400px] px-5 sm:px-10 grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-center">
         <div className="relative justify-self-center lg:justify-self-start">
           <div
-            className="relative overflow-hidden rounded-full ring-2 ring-[#C8FF00]/40 float-slow bg-[#111]"
+            className="relative overflow-hidden rounded-full ring-2 ring-[#C8FF00]/40 float-slow bg-transparent"
             style={{ width: 320, height: 320 }}
           >
             <img
               src={profile.url}
               alt="Hammad Alvi portrait"
-              className="absolute inset-0 h-full w-full object-contain"
-              style={{ objectPosition: "center center" }}
+              className="absolute inset-0 h-full w-full object-cover"
+              style={{ objectPosition: "center top" }}
             />
           </div>
           <div className="absolute -bottom-4 -right-2 rotate-3 rounded-2xl bg-[#C8FF00] text-black px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] glow-yellow">

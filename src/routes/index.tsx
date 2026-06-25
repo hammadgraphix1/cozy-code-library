@@ -293,7 +293,7 @@ function ServicesPreview() {
 }
 
 function Tools() {
-  const tools: { name: string; logo: JSX.Element }[] = [
+  const tools: { name: string; logo: React.ReactNode }[] = [
     {
       name: "Adobe Photoshop",
       logo: (

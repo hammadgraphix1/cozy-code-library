@@ -54,14 +54,14 @@ function Hero() {
           <div className="reveal-up flex justify-center lg:justify-start" style={{ animationDelay: "80ms" }}>
             <div className="relative">
               <div
-                className="relative overflow-hidden rounded-full ring-4 ring-[#C8FF00]/40 breathe"
+                className="relative overflow-hidden rounded-full ring-4 ring-[#C8FF00]/40 breathe bg-[#111]"
                 style={{ width: 200, height: 200 }}
               >
                 <img
                   src={profile.url}
                   alt="Hammad Alvi"
-                  className="absolute inset-0 h-full w-full object-cover"
-                  style={{ objectPosition: "center 22%" }}
+                  className="absolute inset-0 h-full w-full object-contain"
+                  style={{ objectPosition: "center center" }}
                 />
               </div>
               <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 rounded-full bg-[#0A0A0A] border border-[#C8FF00]/40 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-[#C8FF00]">
@@ -293,26 +293,78 @@ function ServicesPreview() {
 }
 
 function Tools() {
-  const tools = [
+  const tools: { name: string; logo: React.ReactNode }[] = [
     {
       name: "Adobe Photoshop",
-      color: "#31A8FF",
-      mark: "Ps",
+      logo: (
+        <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="64" height="64" rx="12" fill="#001E36" />
+          <text
+            x="50%"
+            y="54%"
+            dominantBaseline="middle"
+            textAnchor="middle"
+            fontFamily="'Helvetica Neue', Arial, sans-serif"
+            fontWeight="800"
+            fontSize="30"
+            fill="#31A8FF"
+          >
+            Ps
+          </text>
+        </svg>
+      ),
     },
     {
       name: "Adobe Illustrator",
-      color: "#FF9A00",
-      mark: "Ai",
+      logo: (
+        <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="64" height="64" rx="12" fill="#1C0A00" />
+          <text
+            x="50%"
+            y="54%"
+            dominantBaseline="middle"
+            textAnchor="middle"
+            fontFamily="'Helvetica Neue', Arial, sans-serif"
+            fontWeight="800"
+            fontSize="30"
+            fill="#FF9A00"
+          >
+            Ai
+          </text>
+        </svg>
+      ),
     },
     {
       name: "Canva",
-      color: "#00C4CC",
-      mark: "Cv",
+      logo: (
+        <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <circle cx="32" cy="32" r="32" fill="#00C4CC" />
+          <text
+            x="50%"
+            y="55%"
+            dominantBaseline="middle"
+            textAnchor="middle"
+            fontFamily="'Helvetica Neue', Arial, sans-serif"
+            fontWeight="700"
+            fontSize="36"
+            fill="#ffffff"
+          >
+            C
+          </text>
+        </svg>
+      ),
     },
     {
       name: "Figma",
-      color: "#A259FF",
-      mark: "Fg",
+      logo: (
+        <svg width="64" height="64" viewBox="0 0 38 57" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" fill="#1ABCFE" />
+          <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z" fill="#0ACF83" />
+          <path d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z" fill="#FF7262" />
+          <path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" fill="#F24E1E" />
+          <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" fill="#A259FF" />
+        </svg>
+      ),
     },
   ];
   return (
@@ -329,16 +381,9 @@ function Tools() {
               key={t.name}
               className="group relative rounded-3xl border border-white/8 bg-[#111] p-8 flex flex-col items-center justify-center text-center hover:border-[#C8FF00]/30 transition-colors"
             >
-              <span
-                className="flex h-20 w-20 items-center justify-center rounded-2xl font-display text-3xl text-white shadow-lg transition-transform duration-500 group-hover:scale-110"
-                style={{
-                  background: `linear-gradient(135deg, ${t.color}, ${t.color}cc)`,
-                  boxShadow: `0 10px 40px -10px ${t.color}80`,
-                }}
-                aria-hidden
-              >
-                {t.mark}
-              </span>
+              <div className="transition-transform duration-500 group-hover:scale-110">
+                {t.logo}
+              </div>
               <p className="mt-5 text-sm uppercase tracking-[0.18em] text-white/80">{t.name}</p>
             </div>
           ))}
@@ -361,14 +406,14 @@ function About() {
       <div className="relative mx-auto max-w-[1400px] px-5 sm:px-10 grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-center">
         <div className="relative justify-self-center lg:justify-self-start">
           <div
-            className="relative overflow-hidden rounded-full ring-2 ring-[#C8FF00]/40 float-slow"
+            className="relative overflow-hidden rounded-full ring-2 ring-[#C8FF00]/40 float-slow bg-[#111]"
             style={{ width: 320, height: 320 }}
           >
             <img
               src={profile.url}
               alt="Hammad Alvi portrait"
-              className="absolute inset-0 h-full w-full object-cover"
-              style={{ objectPosition: "center 22%" }}
+              className="absolute inset-0 h-full w-full object-contain"
+              style={{ objectPosition: "center center" }}
             />
           </div>
           <div className="absolute -bottom-4 -right-2 rotate-3 rounded-2xl bg-[#C8FF00] text-black px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] glow-yellow">

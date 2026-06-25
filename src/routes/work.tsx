@@ -21,8 +21,17 @@ export const Route = createFileRoute("/work")({
 
 function WorkPage() {
   const [active, setActive] = useState<"All" | Category>("All");
-  const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
-  const logoComing = active === "Logo Design";
+  const [openFolder, setOpenFolder] = useState<Category | null>(null);
+
+  const showFolders = active === "All" && openFolder === null;
+  const activeCategory: Category | null =
+    active !== "All" ? (active as Category) : openFolder;
+
+  const filtered = activeCategory
+    ? projects.filter((p) => p.category === activeCategory)
+    : projects;
+
+  const logoComing = activeCategory === "Logo Design";
 
   return (
     <div className="bg-[#0A0A0A] text-white min-h-screen">
@@ -44,7 +53,10 @@ function WorkPage() {
           {(["All", ...filterCategories] as const).map((c) => (
             <button
               key={c}
-              onClick={() => setActive(c)}
+              onClick={() => {
+                setActive(c);
+                setOpenFolder(null);
+              }}
               className={`shrink-0 rounded-full px-5 py-2.5 text-xs uppercase tracking-[0.18em] transition-all ${
                 active === c
                   ? "bg-[#C8FF00] text-black font-semibold"
@@ -59,22 +71,105 @@ function WorkPage() {
 
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1600px] px-5 sm:px-10">
-          {logoComing ? (
-            <Link to="/work/logo-design" className="block">
-              <ComingSoonCard />
-            </Link>
-          ) : (
-            <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {filtered.map((p, i) => (
-                <ProjectCard key={p.slug} project={p} index={i} />
-              ))}
+          {showFolders ? (
+            <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 stagger">
+              {filterCategories.map((cat) => {
+                const items = projects.filter((p) => p.category === cat);
+                const preview = items[0];
+                return (
+                  <FolderCard
+                    key={cat}
+                    category={cat}
+                    count={items.length}
+                    previewImage={preview?.image}
+                    onOpen={() => setOpenFolder(cat)}
+                  />
+                );
+              })}
             </div>
+          ) : (
+            <>
+              {active === "All" && openFolder && (
+                <button
+                  onClick={() => setOpenFolder(null)}
+                  className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-white/70 hover:border-[#C8FF00] hover:text-[#C8FF00] transition-colors"
+                >
+                  ← Back to folders
+                </button>
+              )}
+              {activeCategory && (
+                <h2 className="mb-10 font-display text-4xl sm:text-6xl tracking-[-0.02em]">
+                  {activeCategory}
+                  <span className="ml-3 text-white/30 text-2xl sm:text-3xl">/ {filtered.length}</span>
+                </h2>
+              )}
+              {logoComing ? (
+                <Link to="/work/logo-design" className="block">
+                  <ComingSoonCard />
+                </Link>
+              ) : (
+                <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 animate-fade-in">
+                  {filtered.map((p, i) => (
+                    <ProjectCard key={p.slug} project={p} index={i} />
+                  ))}
+                </div>
+              )}
+            </>
           )}
         </div>
       </section>
 
       <Footer />
     </div>
+  );
+}
+
+function FolderCard({
+  category,
+  count,
+  previewImage,
+  onOpen,
+}: {
+  category: Category;
+  count: number;
+  previewImage?: string;
+  onOpen: () => void;
+}) {
+  return (
+    <button
+      onClick={onOpen}
+      className="group relative text-left overflow-hidden rounded-3xl border border-white/10 bg-[#111] transition-all duration-500 hover:border-[#C8FF00] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_60px_-15px_rgba(200,255,0,0.35)]"
+    >
+      {/* Folder tab */}
+      <div className="absolute top-0 left-6 h-3 w-24 rounded-b-lg bg-[#C8FF00]/70 group-hover:bg-[#C8FF00] transition-colors" />
+
+      <div className="relative aspect-[4/3] overflow-hidden bg-[#0A0A0A]">
+        {previewImage && (
+          <img
+            src={previewImage}
+            alt={`${category} preview`}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/30 to-transparent" />
+        <span className="absolute top-6 right-5 inline-flex items-center gap-1.5 rounded-full bg-[#C8FF00] text-black px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">
+          {count} {count === 1 ? "design" : "designs"}
+        </span>
+      </div>
+
+      <div className="p-7 flex items-center justify-between gap-4">
+        <div>
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]/80">Folder</span>
+          <h3 className="mt-2 font-display text-2xl sm:text-3xl tracking-[-0.02em]">
+            {category}
+          </h3>
+        </div>
+        <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/60 group-hover:text-[#C8FF00] transition-colors">
+          View All
+          <span className="transition-transform group-hover:translate-x-1">→</span>
+        </span>
+      </div>
+    </button>
   );
 }
 

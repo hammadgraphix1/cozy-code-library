@@ -5,7 +5,13 @@ import { Footer } from "@/components/Footer";
 import { ProjectCard } from "@/components/ProjectCard";
 import { projects, type Category } from "@/data/projects";
 
-const filterCategories: Category[] = ["Logo Design", "Brand Identity Design", "Social Media Design"];
+const filterCategories: Category[] = [
+  "Logo Design",
+  "Brand Identity Design",
+  "Social Media Design",
+  "Advertising Design",
+  "Poster Design",
+];
 
 export const Route = createFileRoute("/work")({
   component: WorkPage,

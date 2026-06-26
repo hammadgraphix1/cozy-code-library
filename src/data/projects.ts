@@ -63,7 +63,7 @@ export const projects: Project[] = [
   },
   {
     slug: "50-percent-discount",
-    title: "50% Discount Campaign",
+    title: "Brand Discount Campaign",
     category: "Social Media Design",
     description:
       "A power-move promotional creative built on chess imagery — communicating premium positioning while running an aggressive limited-client offer.",
@@ -74,7 +74,7 @@ export const projects: Project[] = [
   },
   {
     slug: "the-pillar",
-    title: "The Pillar — Father's Day Tribute",
+    title: "Father's Day Tribute",
     category: "Social Media Design",
     description:
       "A cinematic tribute campaign for Father's Day, anchored in a behind-the-scenes designer-and-mentor narrative shot in moody low-key lighting.",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mega-sale-2026",
-    title: "2026 Mega Sale — Hoodie Collection",
+    title: "Mega Sale Hoodie Campaign",
     category: "Advertising Design",
     description:
       "A high-contrast retail advertising creative for a winter hoodie drop. Diagonal compositional grid and punchy typography drive immediate sale recall.",
@@ -112,7 +112,7 @@ export const projects: Project[] = [
   },
   {
     slug: "indonesia-travel",
-    title: "Let's Cover Indonesia",
+    title: "Indonesia Travel Campaign",
     category: "Poster Design",
     description:
       "Editorial travel poster blending oversized destination typography with polaroid-stack photography — built for an outbound travel agency campaign.",
@@ -132,8 +132,8 @@ export const projects: Project[] = [
     client: "Alvies Travel",
   },
   {
-    slug: "america-elegance-2",
-    title: "America Elegance — Travel Package",
+    slug: "america-elegance",
+    title: "America Elegance Poster",
     category: "Poster Design",
     description: "A bold travel package poster featuring iconic American landmarks, destination highlights, and full service amenities for Alvies Travel.",
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/fzWbAui8cqns14QIOD3l/image.jpg",
@@ -153,7 +153,7 @@ export const projects: Project[] = [
   },
   {
     slug: "travel-30-off",
-    title: "Let's Get Ready to Travel",
+    title: "Travel 30% Off Campaign",
     category: "Poster Design",
     description: "A vibrant travel promotion creative featuring a 30% off campaign with bold orange branding, page-curl effect, and sunset photography.",
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/CGlcJqPFyrIlb3dtsWqE/image.jpg",
@@ -163,7 +163,7 @@ export const projects: Project[] = [
   },
   {
     slug: "social-light-blue",
-    title: "Light Blue Social Campaign",
+    title: "Marketing Service Design",
     category: "Advertising Design",
     description: "A clean and modern social media design with a light blue color palette for brand engagement.",
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/upPLyK8eOovYXAID0QT9/image.jpg",

@@ -12,10 +12,10 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-4">
               <span className="relative inline-block h-14 w-14 shrink-0 overflow-hidden rounded-full ring-2 ring-[#C8FF00]/40">
-                <img src={profile.url} alt="Hammad Alvi" className="absolute inset-0 h-full w-full object-cover" style={{ objectPosition: "center 25%" }} />
+                <img src={profile.url} alt="Hammad Alvi" className="absolute inset-0 h-full w-full object-cover" style={{ objectPosition: "center top" }} />
               </span>
               <div>
-                <p className="font-display text-xl lowercase">hammadgraphix</p>
+                <p className="font-display text-xl lowercase">Hammad Alvi</p>
                 <p className="text-xs uppercase tracking-[0.2em] text-white/50">I solve brand problems visually.</p>
               </div>
             </div>

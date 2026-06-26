@@ -180,6 +180,6 @@ export const services = [
 ];
 
 export const WHATSAPP_URL = "https://wa.me/923182957713";
-export const EMAIL = "hammadgraphixs@gmail.com";
+export const EMAIL = "hammadgraphix1@gmail.com";
 export const INSTAGRAM = "https://www.instagram.com/hammad.graphix/?hl=en";
 export const LINKEDIN = "https://www.linkedin.com/in/hammad-alvi-a06510372/";

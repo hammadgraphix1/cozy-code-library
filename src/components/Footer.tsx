@@ -16,7 +16,7 @@ export function Footer() {
               </span>
               <div>
                 <p className="font-display text-xl lowercase">hammadgraphix</p>
-                <p className="text-xs uppercase tracking-[0.2em] text-white/50">Brand Identity Designer</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-white/50">I solve brand problems visually.</p>
               </div>
             </div>
             <p className="mt-6 max-w-md text-sm text-white/60 leading-relaxed">

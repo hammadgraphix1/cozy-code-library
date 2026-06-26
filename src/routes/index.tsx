@@ -214,25 +214,40 @@ function ProcessDiagram() {
 }
 
 function FeaturedWork({ projects }: { projects: typeof import("@/data/projects").projects }) {
+  const byCategory = [
+    { cat: "Brand Identity Design", items: projects.filter(p => p.category === "Brand Identity Design") },
+    { cat: "Social Media Design", items: projects.filter(p => p.category === "Social Media Design") },
+    { cat: "Advertising Design", items: projects.filter(p => p.category === "Advertising Design") },
+    { cat: "Poster Design", items: projects.filter(p => p.category === "Poster Design") },
+  ].filter(g => g.items.length > 0);
+
   return (
     <section className="relative py-24 sm:py-32 border-t border-white/5">
       <div className="mx-auto max-w-[1600px] px-5 sm:px-10">
-        <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
+        <div className="flex flex-wrap items-end justify-between gap-6 mb-16">
           <div>
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Selected Work</span>
             <h2 className="mt-4 font-display text-5xl sm:text-7xl leading-[0.9]">Featured Work</h2>
           </div>
           <Link to="/work" className="group inline-flex items-center gap-3 text-sm text-white/70 hover:text-white">
             All Projects
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 group-hover:bg-[#C8FF00] group-hover:border-[#C8FF00] group-hover:text-black transition-all">
-              →
-            </span>
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 group-hover:bg-[#C8FF00] group-hover:border-[#C8FF00] group-hover:text-black transition-all">→</span>
           </Link>
         </div>
-
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p, i) => (
-            <ProjectCard key={p.slug} project={p} index={i} />
+        <div className="space-y-24">
+          {byCategory.map(({ cat, items }) => (
+            <div key={cat}>
+              <div className="flex items-end justify-between mb-8 border-b border-white/8 pb-5">
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Category</span>
+                  <h3 className="mt-1 font-display text-3xl sm:text-5xl tracking-[-0.02em]">{cat}</h3>
+                </div>
+                <span className="font-display text-6xl text-white/5">{`0${items.length}`}</span>
+              </div>
+              <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {items.map((p, i) => <ProjectCard key={p.slug} project={p} index={i} />)}
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -293,9 +308,10 @@ function ServicesPreview() {
 }
 
 function Tools() {
-  const tools: { name: string; logo: React.ReactNode }[] = [
+  const tools: { name: string; label?: string; logo: React.ReactNode }[] = [
     {
       name: "Adobe Photoshop",
+      label: "Core Skill",
       logo: (
         <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
           <rect width="64" height="64" rx="12" fill="#001E36" />
@@ -316,6 +332,7 @@ function Tools() {
     },
     {
       name: "Adobe Illustrator",
+      label: "Core Skill",
       logo: (
         <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
           <rect width="64" height="64" rx="12" fill="#1C0A00" />
@@ -338,7 +355,7 @@ function Tools() {
       name: "Canva",
       logo: (
         <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-          <circle cx="32" cy="32" r="32" fill="#00C4CC" />
+          <circle cx="32" cy="32" r="32" fill="#7D2AE8" />
           <text
             x="50%"
             y="55%"
@@ -346,10 +363,10 @@ function Tools() {
             textAnchor="middle"
             fontFamily="'Helvetica Neue', Arial, sans-serif"
             fontWeight="700"
-            fontSize="36"
+            fontSize="26"
             fill="#ffffff"
           >
-            C
+            Cv
           </text>
         </svg>
       ),
@@ -381,6 +398,9 @@ function Tools() {
               key={t.name}
               className="group relative rounded-3xl border border-white/8 bg-[#111] p-8 flex flex-col items-center justify-center text-center hover:border-[#C8FF00]/30 transition-colors"
             >
+              {t.label && (
+                <span className="absolute top-3 right-3 rounded-full bg-[#C8FF00]/15 border border-[#C8FF00]/30 px-2 py-0.5 text-[8px] uppercase tracking-[0.15em] text-[#C8FF00] font-bold">★ {t.label}</span>
+              )}
               <div className="transition-transform duration-500 group-hover:scale-110">
                 {t.logo}
               </div>

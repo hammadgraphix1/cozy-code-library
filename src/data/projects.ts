@@ -169,8 +169,7 @@ export const projects: Project[] = [
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/upPLyK8eOovYXAID0QT9/image.jpg",
     year: "2025",
     client: "Hammad Graphix",
-    featured: true,
-},
+    ffeatured: true,
   },
   {
     slug: "thumbnail-complete-35",

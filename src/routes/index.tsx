@@ -219,7 +219,7 @@ function FeaturedWork({ projects }: { projects: typeof import("@/data/projects")
       <div className="mx-auto max-w-[1600px] px-5 sm:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
           <div>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Selected · 2024 — 2025</span>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Selected Work</span>
             <h2 className="mt-4 font-display text-5xl sm:text-7xl leading-[0.9]">Featured Work</h2>
           </div>
           <Link to="/work" className="group inline-flex items-center gap-3 text-sm text-white/70 hover:text-white">

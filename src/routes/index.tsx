@@ -1,3 +1,4 @@
+import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -214,19 +215,20 @@ function ProcessDiagram() {
 }
 
 function FeaturedWork({ projects }: { projects: typeof import("@/data/projects").projects }) {
-  const byCategory = [
-    { cat: "Brand Identity Design", items: projects.filter(p => p.category === "Brand Identity Design") },
-    { cat: "Social Media Design", items: projects.filter(p => p.category === "Social Media Design") },
-    { cat: "Advertising Design", items: projects.filter(p => p.category === "Advertising Design") },
-    { cat: "Poster Design", items: projects.filter(p => p.category === "Poster Design") },
-  ].filter(g => g.items.length > 0);
+  const [lightbox, setLightbox] = React.useState<string | null>(null);
 
   return (
     <section className="relative py-24 sm:py-32 border-t border-white/5">
+      {lightbox && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm" onClick={() => setLightbox(null)}>
+          <button className="absolute top-6 right-6 text-white/60 hover:text-white text-xs uppercase tracking-[0.2em]" onClick={() => setLightbox(null)}>✕ Close</button>
+          <img src={lightbox} alt="Full design" className="max-h-[90vh] max-w-[90vw] object-contain rounded-2xl" onClick={(e) => e.stopPropagation()} />
+        </div>
+      )}
       <div className="mx-auto max-w-[1600px] px-5 sm:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-16">
           <div>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Selected Work</span>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Portfolio</span>
             <h2 className="mt-4 font-display text-5xl sm:text-7xl leading-[0.9]">Featured Work</h2>
           </div>
           <Link to="/work" className="group inline-flex items-center gap-3 text-sm text-white/70 hover:text-white">
@@ -234,20 +236,20 @@ function FeaturedWork({ projects }: { projects: typeof import("@/data/projects")
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 group-hover:bg-[#C8FF00] group-hover:border-[#C8FF00] group-hover:text-black transition-all">→</span>
           </Link>
         </div>
-        <div className="space-y-24">
-          {byCategory.map(({ cat, items }) => (
-            <div key={cat}>
-              <div className="flex items-end justify-between mb-8 border-b border-white/8 pb-5">
-                <div>
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Category</span>
-                  <h3 className="mt-1 font-display text-3xl sm:text-5xl tracking-[-0.02em]">{cat}</h3>
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((p) => (
+            <button key={p.slug} onClick={() => setLightbox(p.image)} className="group relative overflow-hidden rounded-2xl bg-[#111] border border-white/5 hover:border-[#C8FF00]/40 transition-all duration-500 text-left">
+              <div className="relative aspect-square overflow-hidden">
+                <img src={p.image} alt={p.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500 flex items-center justify-center">
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 inline-flex items-center gap-2 rounded-full bg-white text-black px-4 py-2 text-xs font-bold uppercase tracking-[0.15em]">⊕ Full View</span>
                 </div>
-                <span className="font-display text-6xl text-white/5">{`0${items.length}`}</span>
               </div>
-              <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {items.map((p, i) => <ProjectCard key={p.slug} project={p} index={i} />)}
+              <div className="p-4">
+                <p className="font-display text-lg">{p.title}</p>
+                <p className="text-xs text-white/40 uppercase tracking-[0.15em] mt-1">{p.category}</p>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

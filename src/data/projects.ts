@@ -141,6 +141,26 @@ export const projects: Project[] = [
     year: "2025",
     client: "Confidential",
   },
+  {
+    slug: "travel-30-off",
+    title: "Let's Get Ready to Travel",
+    category: "Advertising Design",
+    description: "A vibrant travel promotion creative featuring a 30% off campaign with bold orange branding, page-curl effect, and sunset photography.",
+    image: "https://plain-eeur-prod-public.komododecks.com/202606/26/CGlcJqPFyrIlb3dtsWqE/image.jpg",
+    year: "2025",
+    client: "Graphix Travel",
+    featured: true,
+  },
+  {
+    slug: "social-light-blue",
+    title: "Light Blue Social Campaign",
+    category: "Social Media Design",
+    description: "A clean and modern social media design with a light blue color palette for brand engagement.",
+    image: "https://plain-eeur-prod-public.komododecks.com/202606/26/upPLyK8eOovYXAID0QT9/image.jpg",
+    year: "2025",
+    client: "Hammad Graphix",
+    featured: true,
+  },
 ];
 
 export const categories: Category[] = [

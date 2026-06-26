@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     slug: "iconic-identities",
     title: "Iconic Identities",
-    category: "Brand Identity Design",
+    category: "Social Media Design",
     description:
       "A bold brand-positioning visual built around the idea of timeless icons — fusing classical portraiture with neon energy and high-contrast typographic systems.",
     image: identities.url,
@@ -144,7 +144,7 @@ export const projects: Project[] = [
   {
     slug: "travel-30-off",
     title: "Let's Get Ready to Travel",
-    category: "Advertising Design",
+    category: "Poster Design",
     description: "A vibrant travel promotion creative featuring a 30% off campaign with bold orange branding, page-curl effect, and sunset photography.",
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/CGlcJqPFyrIlb3dtsWqE/image.jpg",
     year: "2025",
@@ -154,7 +154,7 @@ export const projects: Project[] = [
   {
     slug: "social-light-blue",
     title: "Light Blue Social Campaign",
-    category: "Social Media Design",
+    category: "Advertising Design",
     description: "A clean and modern social media design with a light blue color palette for brand engagement.",
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/upPLyK8eOovYXAID0QT9/image.jpg",
     year: "2025",

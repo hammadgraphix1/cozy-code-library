@@ -311,6 +311,7 @@ function Tools() {
   const tools: { name: string; label?: string; logo: React.ReactNode }[] = [
     {
       name: "Adobe Photoshop",
+      label: "Core Skill",
       logo: (
         <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
           <rect width="64" height="64" rx="12" fill="#001E36" />
@@ -331,6 +332,7 @@ function Tools() {
     },
     {
       name: "Adobe Illustrator",
+      label: "Core Skill",
       logo: (
         <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
           <rect width="64" height="64" rx="12" fill="#1C0A00" />
@@ -353,7 +355,7 @@ function Tools() {
       name: "Canva",
       logo: (
         <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-          <circle cx="32" cy="32" r="32" fill="#00C4CC" />
+          <circle cx="32" cy="32" r="32" fill="#7D2AE8" />
           <text
             x="50%"
             y="55%"
@@ -361,10 +363,10 @@ function Tools() {
             textAnchor="middle"
             fontFamily="'Helvetica Neue', Arial, sans-serif"
             fontWeight="700"
-            fontSize="36"
+            fontSize="26"
             fill="#ffffff"
           >
-            C
+            Cv
           </text>
         </svg>
       ),
@@ -396,6 +398,9 @@ function Tools() {
               key={t.name}
               className="group relative rounded-3xl border border-white/8 bg-[#111] p-8 flex flex-col items-center justify-center text-center hover:border-[#C8FF00]/30 transition-colors"
             >
+              {t.label && (
+                <span className="absolute top-3 right-3 rounded-full bg-[#C8FF00]/15 border border-[#C8FF00]/30 px-2 py-0.5 text-[8px] uppercase tracking-[0.15em] text-[#C8FF00] font-bold">★ {t.label}</span>
+              )}
               <div className="transition-transform duration-500 group-hover:scale-110">
                 {t.logo}
               </div>

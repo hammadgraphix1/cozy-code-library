@@ -132,6 +132,16 @@ export const projects: Project[] = [
     client: "Alvies Travel",
   },
   {
+    slug: "america-elegance-2",
+    title: "America Elegance — Travel Package",
+    category: "Poster Design",
+    description: "A bold travel package poster featuring iconic American landmarks, destination highlights, and full service amenities for Alvies Travel.",
+    image: "https://plain-eeur-prod-public.komododecks.com/202606/26/fzWbAui8cqns14QIOD3l/image.jpg",
+    year: "2025",
+    client: "Alvies Travel",
+    featured: true,
+  },
+  {
     slug: "experienced-marketing-service",
     title: "Experienced Marketing Service",
     category: "Advertising Design",

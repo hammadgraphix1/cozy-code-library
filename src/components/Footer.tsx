@@ -15,7 +15,7 @@ export function Footer() {
                 <img src={profile.url} alt="Hammad Alvi" className="absolute inset-0 h-full w-full object-cover" style={{ objectPosition: "center top" }} />
               </span>
               <div>
-                <p className="font-display text-xl lowercase">Hammad Alvi</p>
+                <p className="font-display text-xl">Hammad Alvi</p>
                 <p className="text-xs uppercase tracking-[0.2em] text-white/50">I solve brand problems visually.</p>
               </div>
             </div>

@@ -174,7 +174,7 @@ export const projects: Project[] = [
   },
   {
     slug: "thumbnail-complete-35",
-    title: "Thumbnail Design No.1",
+    title: "Gaming Channel Thumbnail",
     category: "Thumbnail Design",
     description: "High-impact YouTube thumbnail designed to maximize click-through rates with bold typography and striking visuals.",
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/oORxShOlPIR9QQvoKQ9x/image.jpg",
@@ -184,7 +184,7 @@ export const projects: Project[] = [
   },
   {
     slug: "thumbnail-complete-40",
-    title: "Thumbnail Design No.2",
+    title: "Viral Hook Thumbnail",
     category: "Thumbnail Design",
     description: "Eye-catching thumbnail with dynamic composition built for maximum audience engagement.",
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/aWR5CFypkt0IVuGjKdFx/image.jpg",
@@ -194,7 +194,7 @@ export const projects: Project[] = [
   },
   {
     slug: "thumbnail-cricket",
-    title: "Thumbnail Design No.3",
+    title: "Sports Event Thumbnail",
     category: "Thumbnail Design",
     description: "Sports event thumbnail with high-energy design for cricket match coverage.",
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/ZWApYqcdmnZMUiXIncPA/image.jpg",
@@ -204,7 +204,7 @@ export const projects: Project[] = [
   },
   {
     slug: "thumbnail-complete-177",
-    title: "Thumbnail Design No.4",
+    title: "Health & Wellness Thumbnail",
     category: "Thumbnail Design",
     description: "Bold and professional thumbnail design crafted for high retention and click-through.",
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/pbcPAajXlLn1TyvJnRnE/image.jpg",

@@ -216,7 +216,7 @@ function ProcessDiagram() {
 
 function FeaturedWork({ projects }: { projects: typeof import("@/data/projects").projects }) {
   const [lightbox, setLightbox] = React.useState<string | null>(null);
-  const cats = ["Brand Identity Design","Social Media Design","Advertising Design","Poster Design"] as const;
+  const cats = ["Brand Identity Design","Social Media Design","Advertising Design","Poster Design","Thumbnail Design"] as const;
   const grouped = cats.map(cat => ({ cat, items: projects.filter(p => p.category === cat) })).filter(g => g.items.length > 0);
 
   return (

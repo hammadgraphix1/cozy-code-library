@@ -11,7 +11,8 @@ export type Category =
   | "Brand Identity Design"
   | "Social Media Design"
   | "Advertising Design"
-  | "Poster Design";
+  | "Poster Design"
+  | "Thumbnail Design";
 
 export interface Project {
   slug: string;
@@ -169,7 +170,7 @@ export const projects: Project[] = [
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/upPLyK8eOovYXAID0QT9/image.jpg",
     year: "2025",
     client: "Hammad Graphix",
-    ffeatured: true,
+    featured: true,
   },
   {
     slug: "thumbnail-complete-35",

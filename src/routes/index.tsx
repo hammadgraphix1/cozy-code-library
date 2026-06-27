@@ -32,6 +32,7 @@ function HomePage() {
       <Hero />
       <Marquee />
       <ProcessDiagram />
+      <SpotMindersHero />
       <FeaturedWork projects={featured} />
       <ServicesPreview />
       <Tools />

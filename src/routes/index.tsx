@@ -621,32 +621,44 @@ function Reviews() {
   const reviews = [
     {
       name: "Bilal Rafaqat",
+      initials: "BR",
       country: "🇵🇰",
-      text: "I've been very happy with Hammad's work. He designs outstanding YouTube thumbnails that grab attention and look professional. He is reliable, talented, and highly recommended to anyone looking for a skilled graphic designer.",
+      location: "Pakistan",
+      text: "I've been very happy with Hammad's work. He designs outstanding YouTube thumbnails that grab attention and look professional. Reliable, talented, and highly recommended.",
     },
     {
       name: "Maani",
+      initials: "M",
       country: "🇵🇰",
+      location: "Pakistan",
       text: "Good work, got my Fiverr images done and they looked clean. No complaints, will order again.",
     },
     {
       name: "Ehtisham",
+      initials: "E",
       country: "🇵🇰",
+      location: "Pakistan",
       text: "Bro the thumbnails actually worked, views went up. That's all I needed to see tbh.",
     },
     {
       name: "Tina",
+      initials: "T",
       country: "🇮🇳",
+      location: "India",
       text: "Designs were good and he delivered on time. Happy with it overall!",
     },
     {
       name: "Philippe",
+      initials: "P",
       country: "🇨🇦",
+      location: "Canada",
       text: "Hammad put in a lot of effort and it showed. Really appreciated the dedication throughout.",
     },
     {
       name: "Arjun",
+      initials: "A",
       country: "🇮🇳",
+      location: "India",
       text: "Looked professional, understood what I wanted. Solid work.",
     },
   ];
@@ -667,16 +679,22 @@ function Reviews() {
               key={r.name}
               className="relative rounded-2xl border border-white/8 bg-[#111] p-6 flex flex-col gap-4 hover:border-[#C8FF00]/30 transition-colors duration-300"
             >
+              <div className="flex items-center gap-3">
+                <div className="relative flex-shrink-0 h-12 w-12 rounded-full bg-[#C8FF00]/10 border border-[#C8FF00]/30 flex items-center justify-center">
+                  <span className="font-display text-base text-[#C8FF00]">{r.initials}</span>
+                  <span className="absolute -bottom-1 -right-1 text-base leading-none">{r.country}</span>
+                </div>
+                <div>
+                  <p className="font-display text-sm text-white">{r.name}</p>
+                  <p className="text-[11px] text-white/40 uppercase tracking-[0.15em]">{r.location}</p>
+                </div>
+              </div>
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-[#C8FF00] text-sm">★</span>
                 ))}
               </div>
               <p className="text-white/70 text-sm leading-relaxed flex-1">"{r.text}"</p>
-              <div className="flex items-center gap-2 pt-2 border-t border-white/8">
-                <span className="text-xl">{r.country}</span>
-                <span className="font-display text-sm text-white">{r.name}</span>
-              </div>
             </div>
           ))}
         </div>

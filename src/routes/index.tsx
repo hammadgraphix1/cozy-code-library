@@ -38,6 +38,7 @@ function HomePage() {
       <Tools />
       <About />
       <StatsBlock />
+      <Reviews />
       <CTA />
       <Footer />
     </div>
@@ -611,6 +612,73 @@ function SpotMindersHero() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+function Reviews() {
+  const reviews = [
+    {
+      name: "Bilal Rafaqat",
+      country: "🇵🇰",
+      text: "I've been very happy with Hammad's work. He designs outstanding YouTube thumbnails that grab attention and look professional. He is reliable, talented, and highly recommended to anyone looking for a skilled graphic designer.",
+    },
+    {
+      name: "Maani",
+      country: "🇵🇰",
+      text: "Good work, got my Fiverr images done and they looked clean. No complaints, will order again.",
+    },
+    {
+      name: "Ehtisham",
+      country: "🇵🇰",
+      text: "Bro the thumbnails actually worked, views went up. That's all I needed to see tbh.",
+    },
+    {
+      name: "Tina",
+      country: "🇮🇳",
+      text: "Designs were good and he delivered on time. Happy with it overall!",
+    },
+    {
+      name: "Philippe",
+      country: "🇨🇦",
+      text: "Hammad put in a lot of effort and it showed. Really appreciated the dedication throughout.",
+    },
+    {
+      name: "Arjun",
+      country: "🇮🇳",
+      text: "Looked professional, understood what I wanted. Solid work.",
+    },
+  ];
+
+  return (
+    <section className="relative py-24 sm:py-32 border-t border-white/5 overflow-hidden">
+      <div className="pointer-events-none absolute -right-40 top-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-[#C8FF00]/[0.04] blur-[120px]" />
+      <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
+        <div className="text-center mb-16">
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Client Reviews</span>
+          <h2 className="mt-4 font-display text-5xl sm:text-7xl leading-[0.9]">
+            What clients <em className="not-italic text-[#C8FF00]">say.</em>
+          </h2>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {reviews.map((r) => (
+            <div
+              key={r.name}
+              className="relative rounded-2xl border border-white/8 bg-[#111] p-6 flex flex-col gap-4 hover:border-[#C8FF00]/30 transition-colors duration-300"
+            >
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-[#C8FF00] text-sm">★</span>
+                ))}
+              </div>
+              <p className="text-white/70 text-sm leading-relaxed flex-1">"{r.text}"</p>
+              <div className="flex items-center gap-2 pt-2 border-t border-white/8">
+                <span className="text-xl">{r.country}</span>
+                <span className="font-display text-sm text-white">{r.name}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

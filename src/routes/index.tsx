@@ -245,10 +245,10 @@ function FeaturedWork({ projects }: { projects: typeof import("@/data/projects")
                 <h3 className="font-display text-2xl sm:text-3xl tracking-[-0.02em]">{cat}</h3>
                 <span className="text-white/20 font-display text-4xl">{`0${items.length}`}</span>
               </div>
-              <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+              <div className={`grid gap-4 ${cat === "Thumbnail Design" ? "grid-cols-2 sm:grid-cols-2 lg:grid-cols-2" : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"}`}>
                 {items.map(p => (
                   <button key={p.slug} onClick={() => setLightbox(p.image)} className="group relative overflow-hidden rounded-xl bg-[#111] border border-white/5 hover:border-[#C8FF00]/40 transition-all duration-300">
-                    <div className="relative aspect-square overflow-hidden">
+                    <div className={`relative overflow-hidden ${cat === "Thumbnail Design" ? "aspect-video" : "aspect-square"}`}>
                       <img src={p.image} alt={p.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                         <span className="opacity-0 group-hover:opacity-100 transition-opacity inline-flex items-center gap-1 rounded-full bg-white text-black px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.15em]">⊕ View</span>

@@ -514,6 +514,108 @@ function StatsBlock() {
   );
 }
 
+function SpotMindersHero() {
+  const images = [
+    "https://plain-eeur-prod-public.komododecks.com/202606/27/FzsfLNRZ2DSnLJ3oMoeC/image.jpg",
+    "https://plain-eeur-prod-public.komododecks.com/202606/27/1WY0CUCqVrpLMpfDlUXt/image.jpg",
+    "https://plain-eeur-prod-public.komododecks.com/202606/27/KEzXxpjCcXEgPZZtCHJ2/image.jpg",
+  ];
+  const [active, setActive] = React.useState(0);
+
+  return (
+    <section className="relative py-24 sm:py-32 border-t border-white/5 overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[500px] bg-gradient-to-b from-[#C8FF00]/[0.03] to-transparent" />
+      <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
+        <div className="mb-16 text-center">
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Featured Case Study</span>
+          <h2 className="mt-4 font-display text-5xl sm:text-7xl leading-[0.9]">
+            Tech Product <em className="not-italic text-[#C8FF00]">Launch</em>
+          </h2>
+          <p className="mt-6 max-w-2xl mx-auto text-white/55 text-lg">
+            A complete 3-part social media ad campaign for a premium metal tracking card — features, lifestyle & brand reveal.
+          </p>
+        </div>
+
+        <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <div className="space-y-4">
+            <div className="relative overflow-hidden rounded-2xl aspect-square border border-white/8">
+              <img
+                src={images[active]}
+                alt={`Campaign post ${active + 1}`}
+                className="w-full h-full object-cover transition-all duration-500"
+              />
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {images.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActive(i)}
+                    className={`h-2 rounded-full transition-all duration-300 ${active === i ? "w-8 bg-[#C8FF00]" : "w-2 bg-white/30"}`}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-3">
+              {images.map((img, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActive(i)}
+                  className={`relative overflow-hidden rounded-xl aspect-square border-2 transition-all duration-300 ${active === i ? "border-[#C8FF00]" : "border-white/10 opacity-60 hover:opacity-100"}`}
+                >
+                  <img src={img} alt={`Post ${i + 1}`} className="w-full h-full object-cover" />
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            <div>
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Campaign Arc</span>
+              <div className="mt-4 space-y-3">
+                {[
+                  { n: "01", label: "Feature Callout", desc: "Bold typography highlighting product specs & premium features" },
+                  { n: "02", label: "Lifestyle Integration", desc: "Real-world product-in-use shot for audience relatability" },
+                  { n: "03", label: "Brand Reveal", desc: "Cinematic hero frame to build brand identity & desire" },
+                ].map((s) => (
+                  <div key={s.n} className="flex gap-4 items-start rounded-xl border border-white/8 bg-[#111] p-4">
+                    <span className="font-display text-2xl text-[#C8FF00] shrink-0">{s.n}</span>
+                    <div>
+                      <p className="font-display text-lg">{s.label}</p>
+                      <p className="text-sm text-white/50 mt-1">{s.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Design Decisions</span>
+              <div className="mt-4 grid grid-cols-2 gap-3">
+                {[
+                  { label: "Color System", value: "Neon Green + Black" },
+                  { label: "Typography", value: "Bold Oversized Type" },
+                  { label: "Format", value: "1080 × 1080 Square" },
+                  { label: "Posts", value: "3-Part Series" },
+                ].map((d) => (
+                  <div key={d.label} className="rounded-xl border border-white/8 bg-[#111] p-4">
+                    <p className="text-[10px] uppercase tracking-[0.15em] text-white/40">{d.label}</p>
+                    <p className="mt-1 font-display text-lg text-white">{d.value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-[#C8FF00]/20 bg-[#C8FF00]/5 p-5">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8FF00]">Result</span>
+              <p className="mt-2 text-white/70 leading-relaxed text-sm">
+                A cohesive campaign-ready visual system with unified color language, typography, and product framing — delivering brand identity, product value, and premium positioning across a full social media launch sequence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 function CTA() {
   return (
     <section className="relative py-32 sm:py-40 overflow-hidden border-t border-white/5">

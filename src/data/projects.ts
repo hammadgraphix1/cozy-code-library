@@ -36,6 +36,33 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "spotminders-pro-campaign",
+    title: "Tech Product Launch Campaign",
+    category: "Advertising Design",
+    description:
+      "A complete 3-part social media ad campaign for a premium metal tracking card — covering product features, lifestyle integration, and brand reveal.",
+    image: "https://plain-eeur-prod-public.komododecks.com/202606/27/FzsfLNRZ2DSnLJ3oMoeC/image.jpg",
+    year: "2025",
+    client: "Tech Brand",
+    featured: true,
+    caseStudy: {
+      overview:
+        "A full product launch campaign for a premium Bluetooth tracking card — designed as a 3-post series to build awareness, show real-world use, and create brand desire.",
+      challenge:
+        "Translate a tech product with multiple features into a visually compelling social media campaign that stops the scroll and communicates premium quality instantly.",
+      research:
+        "Studied top-performing tech product ads on Instagram and analyzed how premium brands like Apple and Nothing communicate product features through visual hierarchy and lifestyle photography.",
+      strategy:
+        "Built a 3-part campaign arc: Part 1 — Feature callout with bold typography to highlight specs. Part 2 — Lifestyle shot showing the product in everyday use. Part 3 — Hero reveal to build brand identity and desire.",
+      process:
+        "Used high-contrast neon-green and black color system for instant brand recognition. Designed bold oversized type for feature callouts, clean lifestyle compositions for relatability, and a cinematic hero frame for brand impact.",
+      solution:
+        "A cohesive 3-post campaign system with a unified visual language — consistent color palette, typography, and product framing across all three posts.",
+      result:
+        "Delivered a campaign-ready visual system that communicates product value, premium quality, and brand identity across a full social media launch sequence.",
+    },
+  },
+  {
     slug: "iconic-identities",
     title: "Iconic Identities",
     category: "Social Media Design",

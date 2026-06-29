@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import profile from "@/assets/profile.jpg.asset.json";
+const profile = { url: "/profile.png" };
 import { WHATSAPP_URL } from "@/data/projects";
 
 const nav = [

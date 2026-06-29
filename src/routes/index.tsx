@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProjectCard } from "@/components/ProjectCard";
 import { projects, services, stats, WHATSAPP_URL, categories } from "@/data/projects";
-import profile from "@/assets/profile.jpg.asset.json";
+const profile = { url: "https://plain-eeur-prod-public.komododecks.com/202606/29/TeK8SYEiJ11ZvHQHd0uR/image.jpg" };
 import { useCountUp } from "@/hooks/useCountUp";
 
 export const Route = createFileRoute("/")({

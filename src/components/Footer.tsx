@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import profile from "@/assets/profile.jpg.asset.json";
+const profile = { url: "https://plain-eeur-prod-public.komododecks.com/202606/29/TeK8SYEiJ11ZvHQHd0uR/image.jpg" };
 import { EMAIL, INSTAGRAM, LINKEDIN, WHATSAPP_URL } from "@/data/projects";
 
 export function Footer() {

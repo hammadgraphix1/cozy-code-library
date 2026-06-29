@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-const profile = { url: "/profile.png" };
+const profile = { url: "https://plain-eeur-prod-public.komododecks.com/202606/29/TeK8SYEiJ11ZvHQHd0uR/image.jpg" };
 import { WHATSAPP_URL } from "@/data/projects";
 
 const nav = [

@@ -1,21 +1,3 @@
-// Iconic Identities - image: identities.url,
-image: "https://plain-eeur-prod-public.komododecks.com/202606/29/U72tTguoColIwdeyLpvB/image.jpg",
-
-// Brand Discount - image: discount.url,
-image: "https://plain-eeur-prod-public.komododecks.com/202606/29/28vfmVwicysgzMHR0gj5/image.jpg",
-
-// Father's Day - image: fathersday.url,
-image: "https://plain-eeur-prod-public.komododecks.com/202606/29/0569s3mnc6YkSurg4D2w/image.jpg",
-
-// Mega Sale - image: megasale.url,
-image: "https://plain-eeur-prod-public.komododecks.com/202606/29/QhwyWgkKWAk92EHOFpNC/image.jpg",
-
-// Indonesia - image: indonesia.url,
-image: "https://plain-eeur-prod-public.komododecks.com/202606/29/azQYGRbrDgKcngHrYq0w/image.jpg",
-
-// Marketing - image: marketing.url,
-image: "https://plain-eeur-prod-public.komododecks.com/202606/29/yuzUIe9XnVXveDlATtOl/image.jpg",
-
 export type Category =
   | "Logo Design"
   | "Brand Identity Design"
@@ -49,63 +31,46 @@ export const projects: Project[] = [
     slug: "spotminders-pro-campaign",
     title: "Tech Product Launch Campaign",
     category: "Advertising Design",
-    description:
-      "A complete 3-part social media ad campaign for a premium metal tracking card — covering product features, lifestyle integration, and brand reveal.",
+    description: "A complete 3-part social media ad campaign for a premium metal tracking card — covering product features, lifestyle integration, and brand reveal.",
     image: "https://plain-eeur-prod-public.komododecks.com/202606/27/FzsfLNRZ2DSnLJ3oMoeC/image.jpg",
     year: "2025",
     client: "Tech Brand",
     featured: true,
     caseStudy: {
-      overview:
-        "A full product launch campaign for a premium Bluetooth tracking card — designed as a 3-post series to build awareness, show real-world use, and create brand desire.",
-      challenge:
-        "Translate a tech product with multiple features into a visually compelling social media campaign that stops the scroll and communicates premium quality instantly.",
-      research:
-        "Studied top-performing tech product ads on Instagram and analyzed how premium brands like Apple and Nothing communicate product features through visual hierarchy and lifestyle photography.",
-      strategy:
-        "Built a 3-part campaign arc: Part 1 — Feature callout with bold typography to highlight specs. Part 2 — Lifestyle shot showing the product in everyday use. Part 3 — Hero reveal to build brand identity and desire.",
-      process:
-        "Used high-contrast neon-green and black color system for instant brand recognition. Designed bold oversized type for feature callouts, clean lifestyle compositions for relatability, and a cinematic hero frame for brand impact.",
-      solution:
-        "A cohesive 3-post campaign system with a unified visual language — consistent color palette, typography, and product framing across all three posts.",
-      result:
-        "Delivered a campaign-ready visual system that communicates product value, premium quality, and brand identity across a full social media launch sequence.",
+      overview: "A full product launch campaign for a premium Bluetooth tracking card — designed as a 3-post series to build awareness, show real-world use, and create brand desire.",
+      challenge: "Translate a tech product with multiple features into a visually compelling social media campaign that stops the scroll and communicates premium quality instantly.",
+      research: "Studied top-performing tech product ads on Instagram and analyzed how premium brands like Apple and Nothing communicate product features through visual hierarchy and lifestyle photography.",
+      strategy: "Built a 3-part campaign arc: Part 1 — Feature callout with bold typography to highlight specs. Part 2 — Lifestyle shot showing the product in everyday use. Part 3 — Hero reveal to build brand identity and desire.",
+      process: "Used high-contrast neon-green and black color system for instant brand recognition. Designed bold oversized type for feature callouts, clean lifestyle compositions for relatability, and a cinematic hero frame for brand impact.",
+      solution: "A cohesive 3-post campaign system with a unified visual language — consistent color palette, typography, and product framing across all three posts.",
+      result: "Delivered a campaign-ready visual system that communicates product value, premium quality, and brand identity across a full social media launch sequence.",
     },
   },
   {
     slug: "iconic-identities",
     title: "Iconic Identities",
     category: "Social Media Design",
-    description:
-      "A bold brand-positioning visual built around the idea of timeless icons — fusing classical portraiture with neon energy and high-contrast typographic systems.",
-    image: identities.url,
+    description: "A bold brand-positioning visual built around the idea of timeless icons — fusing classical portraiture with neon energy and high-contrast typographic systems.",
+    image: "https://plain-eeur-prod-public.komododecks.com/202606/29/U72tTguoColIwdeyLpvB/image.jpg",
     year: "2025",
     client: "Hammad Graphix",
     featured: true,
     caseStudy: {
-      overview:
-        "A self-initiated brand campaign positioning Hammad Graphix as a studio that builds iconic, memorable identity systems.",
-      challenge:
-        "Stand out in a saturated freelance designer market without leaning on generic 'creative agency' tropes.",
-      research:
-        "Studied award-winning identity work from Pentagram, Gretel, and DIA. Mapped competitor visual languages across Instagram-first designers.",
-      strategy:
-        "Anchor the brand around an Einstein-as-icon visual metaphor — pairing intellectual heritage with neon-yellow signal color to claim ownership of the 'iconic' positioning.",
-      process:
-        "Iterated 30+ composition variants. Locked the type lockup, neon spotlight, and grid-based scaffolding. Refined the chrome-style pill buttons to read as deliverables.",
-      solution:
-        "A single hero composition that doubles as a positioning statement, scalable across post, reel cover, and case-study hero.",
-      result:
-        "Increased inbound brand inquiries by 3.4x in the first month and became the studio's most-saved post on Instagram.",
+      overview: "A self-initiated brand campaign positioning Hammad Graphix as a studio that builds iconic, memorable identity systems.",
+      challenge: "Stand out in a saturated freelance designer market without leaning on generic 'creative agency' tropes.",
+      research: "Studied award-winning identity work from Pentagram, Gretel, and DIA. Mapped competitor visual languages across Instagram-first designers.",
+      strategy: "Anchor the brand around an Einstein-as-icon visual metaphor — pairing intellectual heritage with neon-yellow signal color to claim ownership of the 'iconic' positioning.",
+      process: "Iterated 30+ composition variants. Locked the type lockup, neon spotlight, and grid-based scaffolding. Refined the chrome-style pill buttons to read as deliverables.",
+      solution: "A single hero composition that doubles as a positioning statement, scalable across post, reel cover, and case-study hero.",
+      result: "Increased inbound brand inquiries by 3.4x in the first month and became the studio's most-saved post on Instagram.",
     },
   },
   {
     slug: "50-percent-discount",
     title: "Brand Discount Campaign",
     category: "Social Media Design",
-    description:
-      "A power-move promotional creative built on chess imagery — communicating premium positioning while running an aggressive limited-client offer.",
-    image: discount.url,
+    description: "A power-move promotional creative built on chess imagery — communicating premium positioning while running an aggressive limited-client offer.",
+    image: "https://plain-eeur-prod-public.komododecks.com/202606/29/28vfmVwicysgzMHR0gj5/image.jpg",
     year: "2025",
     client: "Hammad Graphix",
     featured: true,
@@ -114,9 +79,8 @@ export const projects: Project[] = [
     slug: "the-pillar",
     title: "Father's Day Tribute",
     category: "Social Media Design",
-    description:
-      "A cinematic tribute campaign for Father's Day, anchored in a behind-the-scenes designer-and-mentor narrative shot in moody low-key lighting.",
-    image: fathersday.url,
+    description: "A cinematic tribute campaign for Father's Day, anchored in a behind-the-scenes designer-and-mentor narrative shot in moody low-key lighting.",
+    image: "https://plain-eeur-prod-public.komododecks.com/202606/29/0569s3mnc6YkSurg4D2w/image.jpg",
     year: "2025",
     client: "Personal Project",
     featured: true,
@@ -125,49 +89,30 @@ export const projects: Project[] = [
     slug: "mega-sale-2026",
     title: "Mega Sale Hoodie Campaign",
     category: "Advertising Design",
-    description:
-      "A high-contrast retail advertising creative for a winter hoodie drop. Diagonal compositional grid and punchy typography drive immediate sale recall.",
-    image: megasale.url,
+    description: "A high-contrast retail advertising creative for a winter hoodie drop. Diagonal compositional grid and punchy typography drive immediate sale recall.",
+    image: "https://plain-eeur-prod-public.komododecks.com/202606/29/QhwyWgkKWAk92EHOFpNC/image.jpg",
     year: "2025",
-    client: "Grapghix Apparel",
+    client: "Graphix Apparel",
     featured: true,
     caseStudy: {
-      overview:
-        "Seasonal e-commerce launch creative for a winter hoodie collection targeting a 70% discount window.",
-      challenge:
-        "Translate a one-color hoodie product into a feed-stopping promotional visual that converts within 1.5 seconds.",
-      research:
-        "Audited 50+ fashion sale creatives. Found that diagonal axis + serif/sans contrast outperformed centered layouts by 2x on saves.",
-      strategy:
-        "Build the layout around an aggressive diagonal blush band, locking attention into the 'MEGA SALE' lockup with the product as evidence, not subject.",
-      process:
-        "Tested 6 typographic systems. Final lockup uses an oversized condensed sans for impact + a navy block to mute the red intensity.",
-      solution:
-        "A modular template system that can be re-skinned for future drops by swapping product photography and price band.",
-      result:
-        "Drove a 42% click-through lift versus the brand's previous best-performing sale creative.",
+      overview: "Seasonal e-commerce launch creative for a winter hoodie collection targeting a 70% discount window.",
+      challenge: "Translate a one-color hoodie product into a feed-stopping promotional visual that converts within 1.5 seconds.",
+      research: "Audited 50+ fashion sale creatives. Found that diagonal axis + serif/sans contrast outperformed centered layouts by 2x on saves.",
+      strategy: "Build the layout around an aggressive diagonal blush band, locking attention into the 'MEGA SALE' lockup with the product as evidence, not subject.",
+      process: "Tested 6 typographic systems. Final lockup uses an oversized condensed sans for impact + a navy block to mute the red intensity.",
+      solution: "A modular template system that can be re-skinned for future drops by swapping product photography and price band.",
+      result: "Drove a 42% click-through lift versus the brand's previous best-performing sale creative.",
     },
   },
   {
     slug: "indonesia-travel",
     title: "Indonesia Travel Campaign",
     category: "Poster Design",
-    description:
-      "Editorial travel poster blending oversized destination typography with polaroid-stack photography — built for an outbound travel agency campaign.",
-    image: indonesia.url,
+    description: "Editorial travel poster blending oversized destination typography with polaroid-stack photography — built for an outbound travel agency campaign.",
+    image: "https://plain-eeur-prod-public.komododecks.com/202606/29/azQYGRbrDgKcngHrYq0w/image.jpg",
     year: "2025",
     client: "Alvies Travel",
     featured: true,
-  },
-  {
-    slug: "america-elegance",
-    title: "America Elegance",
-    category: "Poster Design",
-    description:
-      "Luxury travel poster system spotlighting iconic US destinations through layered photography cards and a service-icon ribbon footer.",
-    image: america.url,
-    year: "2025",
-    client: "Alvies Travel",
   },
   {
     slug: "america-elegance",
@@ -178,16 +123,6 @@ export const projects: Project[] = [
     year: "2025",
     client: "Alvies Travel",
     featured: true,
-  },
-  {
-    slug: "experienced-marketing-service",
-    title: "Experienced Marketing Service",
-    category: "Advertising Design",
-    description:
-      "B2B service-promotion creative built on bold organic shapes and high-contrast portrait photography to project credibility and momentum.",
-    image: marketing.url,
-    year: "2025",
-    client: "Confidential",
   },
   {
     slug: "travel-30-off",
@@ -204,14 +139,14 @@ export const projects: Project[] = [
     title: "Marketing Service Design",
     category: "Advertising Design",
     description: "A clean and modern social media design with a light blue color palette for brand engagement.",
-    image: "https://plain-eeur-prod-public.komododecks.com/202606/26/upPLyK8eOovYXAID0QT9/image.jpg",
+    image: "https://plain-eeur-prod-public.komododecks.com/202606/29/yuzUIe9XnVXveDlATtOl/image.jpg",
     year: "2025",
     client: "Hammad Graphix",
     featured: true,
   },
   {
     slug: "thumbnail-complete-35",
-    title: "Gaming Channel Thumbnail",
+    title: "Crypto Loss Thumbnail",
     category: "Thumbnail Design",
     description: "High-impact YouTube thumbnail designed to maximize click-through rates with bold typography and striking visuals.",
     image: "https://plain-eeur-prod-public.komododecks.com/202606/26/oORxShOlPIR9QQvoKQ9x/image.jpg",
@@ -249,6 +184,15 @@ export const projects: Project[] = [
     client: "YouTube Creator",
     featured: true,
   },
+  {
+    slug: "experienced-marketing-service",
+    title: "Experienced Marketing Service",
+    category: "Advertising Design",
+    description: "B2B service-promotion creative built on bold organic shapes and high-contrast portrait photography to project credibility and momentum.",
+    image: "https://plain-eeur-prod-public.komododecks.com/202606/26/upPLyK8eOovYXAID0QT9/image.jpg",
+    year: "2025",
+    client: "Confidential",
+  },
 ];
 
 export const categories: Category[] = [
@@ -269,21 +213,18 @@ export const stats = [
 export const services = [
   {
     title: "Logo Design",
-    description:
-      "Crafting timeless logos that capture your brand's essence and leave a lasting impression.",
+    description: "Crafting timeless logos that capture your brand's essence and leave a lasting impression.",
     deliverables: ["Custom Mark", "Wordmark", "Logo System", "Usage Guide"],
     comingSoon: true,
   },
   {
     title: "Brand Identity Design",
-    description:
-      "Full visual identity systems — color palettes, typography, brand guidelines, and more — built for consistency and impact.",
+    description: "Full visual identity systems — color palettes, typography, brand guidelines, and more — built for consistency and impact.",
     deliverables: ["Identity System", "Brand Guidelines", "Asset Library", "Launch Kit"],
   },
   {
     title: "Social Media Design",
-    description:
-      "Scroll-stopping visuals designed to engage your audience and grow your digital presence.",
+    description: "Scroll-stopping visuals designed to engage your audience and grow your digital presence.",
     deliverables: ["Post Templates", "Story Kits", "Reel Covers", "Content System"],
   },
 ];

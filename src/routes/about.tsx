@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { stats, WHATSAPP_URL } from "@/data/projects";
-import profile from "@/assets/profile.jpg.asset.json";
+const profile = { url: "https://plain-eeur-prod-public.komododecks.com/202606/29/TeK8SYEiJ11ZvHQHd0uR/image.jpg" };
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,

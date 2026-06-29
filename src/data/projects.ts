@@ -1,10 +1,20 @@
-import identities from "@/assets/identities.jpg.asset.json";
-import discount from "@/assets/discount.jpg.asset.json";
-import fathersday from "@/assets/fathersday.jpg.asset.json";
-import megasale from "@/assets/megasale.jpg.asset.json";
-import indonesia from "@/assets/indonesia.jpg.asset.json";
-import america from "@/assets/america.jpg.asset.json";
-import marketing from "@/assets/marketing.jpg.asset.json";
+// Iconic Identities - image: identities.url,
+image: "https://plain-eeur-prod-public.komododecks.com/202606/29/U72tTguoColIwdeyLpvB/image.jpg",
+
+// Brand Discount - image: discount.url,
+image: "https://plain-eeur-prod-public.komododecks.com/202606/29/28vfmVwicysgzMHR0gj5/image.jpg",
+
+// Father's Day - image: fathersday.url,
+image: "https://plain-eeur-prod-public.komododecks.com/202606/29/0569s3mnc6YkSurg4D2w/image.jpg",
+
+// Mega Sale - image: megasale.url,
+image: "https://plain-eeur-prod-public.komododecks.com/202606/29/QhwyWgkKWAk92EHOFpNC/image.jpg",
+
+// Indonesia - image: indonesia.url,
+image: "https://plain-eeur-prod-public.komododecks.com/202606/29/azQYGRbrDgKcngHrYq0w/image.jpg",
+
+// Marketing - image: marketing.url,
+image: "https://plain-eeur-prod-public.komododecks.com/202606/29/yuzUIe9XnVXveDlATtOl/image.jpg",
 
 export type Category =
   | "Logo Design"

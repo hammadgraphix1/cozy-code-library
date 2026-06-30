@@ -27,8 +27,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:url", content: "https://cozy-code-library.hammadgraphix1.workers.dev/" },
       { property: "og:description", content: "Independent designer building memorable brand identities, advertising creatives and social media systems. Based in Karachi, available worldwide." },
       { name: "twitter:description", content: "Independent designer building memorable brand identities, advertising creatives and social media systems. Based in Karachi, available worldwide." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/60f6bbaf-a301-479c-b9c3-38e3ff357bf3/id-preview-2b0642dd--39c74e31-ca1c-423d-838d-23e370c6dc2c.lovable.app-1782646914645.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/60f6bbaf-a301-479c-b9c3-38e3ff357bf3/id-preview-2b0642dd--39c74e31-ca1c-423d-838d-23e370c6dc2c.lovable.app-1782646914645.png" },
+      { property: "og:image", content: "https://plain-eeur-prod-public.komododecks.com/202606/29/U72tTguoColIwdeyLpvB/image.jpg" },
+      { name: "twitter:image", content: "https://plain-eeur-prod-public.komododecks.com/202606/29/U72tTguoColIwdeyLpvB/image.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
